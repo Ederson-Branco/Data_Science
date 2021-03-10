@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd 
-import tabula
+
 import base64
 from io import BytesIO
 
@@ -158,4 +158,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    print()
+    print(tabula.environment_info())
