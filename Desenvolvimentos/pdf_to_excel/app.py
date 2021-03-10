@@ -151,9 +151,10 @@ def main():
 
     if df_pdf is not None:
         if st.button('Converter'):
-            pd.DataFrame(df_pdf)
+            df = pd.DataFrame(df_pdf)
+
             #df = cria_dataframe(df_pdf)
-            #st.dataframe(df.head())
+            st.dataframe(df.head())
 
             #st.markdown(download_link(df), unsafe_allow_html=True)
 
