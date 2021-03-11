@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd 
-from tabula import read_pdf
+from tabula.io import read_pdf
 import base64
 from io import BytesIO
 
