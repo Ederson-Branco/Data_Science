@@ -9,8 +9,8 @@ from io import BytesIO
 def upload_arquivo():
     data = st.file_uploader('Escolha o arquivo', type = 'pdf')
     if data is not None:
-        # df = read_pdf(data,pages="all",guess=False)
-        df1 = pd.DataFrame(data)
+        df = read_pdf(data,pages="all",guess=False)
+        df1 = pd.DataFrame(df)
         return df1
 
 def filtra_linhas_nao_vazias(df,serie,index):
@@ -156,8 +156,6 @@ def main():
           st.dataframe(df.head())
 
           st.markdown(download_link(df), unsafe_allow_html=True)
-
-
 
 if __name__ == '__main__':
     main()
