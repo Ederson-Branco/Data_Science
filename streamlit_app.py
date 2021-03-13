@@ -150,12 +150,7 @@ def main():
     st.markdown('# Converta seu PDF para Excel')
     df_pdf = upload_arquivo()
 
-    if df_pdf is not None:
-        if st.button('Converter'):
-            df = cria_dataframe(df_pdf)
-            st.dataframe(df.head())
 
-            st.markdown(download_link(df), unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()
