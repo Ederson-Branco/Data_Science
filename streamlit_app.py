@@ -8,10 +8,8 @@ from io import BytesIO
 
 def upload_arquivo():
     data = st.file_uploader('Escolha o arquivo', type = 'pdf')
-    if data is not None:
-        df = read_pdf(data,pages="all",guess=False)
-        df1 = pd.DataFrame(df)
-        return df1
+
+    return data
 
 def filtra_linhas_nao_vazias(df,serie,index):
   coluna_2 = df[0][index].columns[2]
